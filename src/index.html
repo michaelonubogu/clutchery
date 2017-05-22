@@ -1,14 +1,32 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Clutchery</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:300,400,500,600" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root>Loading...</app-root>
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCKTxQA9qEvtc1Vei7pfK0FzFWMlZKG9Y4",
+    authDomain: "clutchery-dev.firebaseapp.com",
+    databaseURL: "https://clutchery-dev.firebaseio.com",
+    projectId: "clutchery-dev",
+    storageBucket: "clutchery-dev.appspot.com",
+    messagingSenderId: "412395309148"
+  };
+  firebase.initializeApp(config);
+</script>
+
 </html>

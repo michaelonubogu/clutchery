@@ -1,0 +1,57 @@
+{
+    "dynamic": {
+        "group":{
+            "name" : "firebase OR api",
+            "urls":{
+                "https://YOUR-FIREBASE-OR-API-URL-PREFIX" :{
+                    "match":"prefix"
+                }
+            },
+            "cache":{
+                "optimizeFor":"enter 'freshness' OR 'performance' here", //enter freshness for always from server unless no connection
+                "maxAgeMs": 3600000,
+                "maxEntries":20,
+                "strategy":"lru" //least recently used caching - how to make sw expire cache
+            }
+        }
+    },
+    "static": {
+        "urls": {
+            "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+            "/index.html": "f9ea22af776a43fb5414bf4013f3d91d8a6a630d",
+            "/inline.bundle.js": "17b187f80fb909ceae90cf7a52970d548d6ae1a7",
+            "/inline.bundle.js.map": "cbbad6de4742d9511bcc6d84bc1c4c6e23d8ffb9",
+            "/main.bundle.js": "5157632ba1282589f3364e40f6ec679d2ca057c0",
+            "/main.bundle.js.map": "4c087111e935b33ac3d050bf3d4e3d8ab418280f",
+            "/polyfills.bundle.js": "aaee57a8ada84c952f138f1227022f3c5dd92f61",
+            "/polyfills.bundle.js.map": "f361b8f33b651160c4da918e1d495c73b66cbcc8",
+            "/styles.bundle.js": "3ba7e7c6294508b375ba88f4ba22a2b931921f40",
+            "/styles.bundle.js.map": "b6af635f8916e09000746ece9126fdd7a71ab38a",
+            "/vendor.bundle.js": "bf7b166475942a6e398ef9f9cf80a4e144c775da",
+            "/vendor.bundle.js.map": "2658db1f62744722012e0747c58a6d557c71a85c"
+        }
+    },
+    "routing": {
+        "index": "/index.html",
+        "routes": {
+            "/": {
+                "prefix": false,
+                "match": "exact"
+            },
+            "/sample": {
+                "match": "exact"
+            }
+        }
+    },
+    "push": {
+        "showNotifications": true,
+        "backgroundOnly": false
+    },
+    "external": {
+        "urls": [
+            {
+                "url": "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:300,400,500,600"
+            }
+        ]
+    }
+}

@@ -8,4 +8,11 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .then(()=> {
+    //check to see if the user's browser supports service workers
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('./assets/worker-basic.min.js');
+    }
+  });
